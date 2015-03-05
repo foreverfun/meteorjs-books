@@ -1,0 +1,1 @@
+technologies used: meteor, mongodb, javascript, bootstrap
