@@ -24,6 +24,7 @@ if (Meteor.isClient) {
     editABook: function() {
       var bookId = Session.get('selectedBook');
       var d= BookCollection.find({_id:bookId}).fetch();
+      // var d = BookCollection.findOne({_id:bookId});
       return d;
     } 
   });
@@ -66,9 +67,10 @@ if (Meteor.isClient) {
     },
 
      "click .edit": function(e) {
-      e.preventDefault();
+      //e.preventDefault();
 
-      $('#editModal').modal({backdrop:true});
+      $('#editModal').appendTo('body').modal();
+      //{backdrop:true}
 
       var d = Blaze.getData(event.target);
       Session.set('selectedBook', d._id);  
