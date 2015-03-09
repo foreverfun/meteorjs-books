@@ -58,9 +58,10 @@ if (Meteor.isClient) {
     },
 
     "click .view": function(e) {
-      e.preventDefault();
+      //e.preventDefault();
 
-      $('#viewModal').modal({backdrop:true});
+      $('#viewModal').modal('show');
+      //$('#viewModal').modal({backdrop:true});
 
       var d = Blaze.getData(event.target);
       Session.set('selectedBook', d._id);  
@@ -69,7 +70,8 @@ if (Meteor.isClient) {
      "click .edit": function(e) {
       //e.preventDefault();
 
-      $('#editModal').appendTo('body').modal();
+      $('#editModal').modal('show');
+      //$('#editModal').appendTo('body').modal();
       //{backdrop:true}
 
       var d = Blaze.getData(event.target);

@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8">
   <title>Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/books.css"/>
 </head>
@@ -31,8 +32,10 @@
     
     <div class="starter-template">
     
-      <h1>Book App</h1>
-    
+      <div class="page-header">
+        <h1>Books<br/><small>Technologies covered: Meteor, Boostrap</small></h1>
+      </div>
+
       <h2>Add A Book</h2>
       <form class="add-book">
         <div class="form-group">
@@ -67,7 +70,8 @@
 
   {{>viewbook}}
   {{>editbook}}  
- 
+
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   
 </body>
@@ -103,7 +107,7 @@
         </div>
       </div>
     </div>
-  </div>
+</div>  
 </template>
 
 <template name="editbook">
